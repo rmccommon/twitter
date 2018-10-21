@@ -52,9 +52,55 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 
+
+
+# Project 6 - *Twitter Part 2*
+
+**Twitter Part 2** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
+
+Time spent: **5** hours spent in total
+
+## User Stories
+
+The following **required** functionality is completed:
+- [x] User can tap on a tweet to view it in a detail view, with controls to retweet, favorite, and reply.
+- [x] User can compose a new tweet by tapping on a compose button.
+- [x] When composing a tweet, user sees a countdown for the number of characters remaining for the tweet (out of 140)
+- [x] User can view their profile in a profile tab
+
+The following **stretch** features are implemented:
+
+
+The following **additional** features are implemented:
+
+- [ ] List anything else that you can get done to improve the app functionality!
+
+Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
+
+1.
+2.
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://image.ibb.co/jZKk5f/twiter-Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+## Notes
+
+Describe any challenges encountered while building the app.
+
+## Credits
+
+List an 3rd party libraries, icons, graphics, or other assets you used in your app.
+
+- [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
+
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2018] [Ryan McCommon]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
