@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController, UITableViewDataSource {
+class TimelineViewController: UIViewController, UITableViewDataSource, makeTweetDelegate {
   
 
     @IBOutlet weak var twitTable: UITableView!
@@ -54,11 +54,41 @@ class TimelineViewController: UIViewController, UITableViewDataSource {
         let tweet = tweets[indexPath.row]
         cell.tweet = tweet
         cell.user = tweet.user
+        cell.indexPath = indexPath
         cell.parent = self as TimelineViewController
         cell.updateContent()
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "detailSegue"){
+            if let detControl = segue.destination as? detailViewController{
+                if let cell = sender as? twitCell{
+                    let tweet = tweets[(cell.indexPath?.row)!]
+                    detControl.tweet = tweet
+                    detControl.user = tweet.user
+                }
+            }
+        }
+        if(segue.identifier == "composeSegue"){
+            if let compControl = segue.destination as? makeTweetViewController{
+                compControl.user = User.current
+                if let destin = segue.destination as? makeTweetViewController{
+                    destin.delegate = self
+                }
+            }
+        }
+        if(segue.identifier == "profileSegue"){
+            if let profControl = segue.destination as? profileViewController{
+                profControl.user = User.current
+            }
+        }
+    }
+    
+    func did(post: Tweet) {
+        self.navigationController?.popViewController(animated: true)
+            getTweets()
+    }
 
     /*
     // MARK: - Navigation

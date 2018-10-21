@@ -28,6 +28,7 @@ class User{
     
     init(dictionary: [String: Any]){
         self.dictionary = dictionary
+
         name = dictionary["name"] as! String
         
         if let profile: String = dictionary["profile_image_url_https"] as? String{
@@ -42,7 +43,7 @@ class User{
             self.screenName = screen
         }
         
-        friendCount = dictionary["favorite_count"] as? Int
+        friendCount = dictionary["friends_count"] as? Int
         followerCount = dictionary["followers_count"] as? Int
         statusCount = dictionary["statuses_count"] as? Int
  
